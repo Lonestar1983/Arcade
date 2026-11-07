@@ -1,0 +1,128 @@
+/* Base and header. */
+.arcade-top-users {
+  color: inherit;
+  font: inherit;
+}
+
+.arcade-top-users-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: .75rem;
+}
+
+.arcade-top-users-header h3 {
+  margin: 0;
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+/* Navigation and keyboard focus. */
+.arcade-top-users-nav {
+  display: flex;
+  gap: .5rem;
+}
+
+.arcade-top-users-nav button {
+  padding: .2rem .3rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.87rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.arcade-top-users-nav button:disabled {
+  opacity: .25;
+  cursor: default;
+}
+
+.arcade-top-users :is(button, a):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.arcade-top-users [hidden] {
+  display: none !important;
+}
+
+/* Featured player. */
+.arcade-top-users-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 1.5rem;
+  padding: 1.5rem 0 1rem;
+}
+
+.arcade-top-users-player,
+.arcade-top-users-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.arcade-top-users-player {
+  position: relative;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.arcade-top-users-profile {
+  gap: 1.5rem;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.arcade-top-users-profile img,
+.arcade-top-users-avatar {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.arcade-top-users-avatar {
+  background: #8882;
+  font-size: 2.5rem;
+  line-height: 88px;
+}
+
+.arcade-top-users-name {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.arcade-top-users-total,
+.arcade-top-users-caption {
+  margin-top: .4rem;
+}
+
+.arcade-top-users-total {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.arcade-top-users-caption {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .65;
+}
+
+.arcade-top-users-empty {
+  margin: 0;
+  opacity: .7;
+}
+
+/* Overlap animated panels to maintain a consistent block height. */
+.arcade-top-users-animated .arcade-top-users-panels {
+  display: grid;
+  overflow: hidden;
+}
+
+.arcade-top-users-animated [data-arcade-panel] {
+  grid-area: 1 / 1;
+}
