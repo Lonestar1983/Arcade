@@ -1,0 +1,129 @@
+/* Base and header. */
+.arcade-now-playing {
+  color: inherit;
+  font: inherit;
+}
+
+.arcade-now-playing-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: .75rem;
+}
+
+.arcade-now-playing-header h3 {
+  margin: 0;
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+/* Navigation and keyboard focus. */
+.arcade-now-playing-nav {
+  display: flex;
+  gap: .5rem;
+}
+
+.arcade-now-playing-nav button {
+  padding: .2rem .3rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 1.87rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.arcade-now-playing-nav button:disabled {
+  opacity: .25;
+  cursor: default;
+}
+
+.arcade-now-playing :is(button, a):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.arcade-now-playing [hidden] {
+  display: none !important;
+}
+
+/* Featured player. */
+.arcade-now-playing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 1.5rem;
+  padding: 1.5rem 0 1rem;
+}
+
+.arcade-now-playing-player,
+.arcade-now-playing-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.arcade-now-playing-player {
+  position: relative;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.arcade-now-playing-profile {
+  gap: 1.5rem;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.arcade-now-playing-profile img,
+.arcade-now-playing-avatar {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.arcade-now-playing-avatar {
+  background: #8882;
+  font-size: 2.5rem;
+  line-height: 88px;
+}
+
+.arcade-now-playing-name {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.arcade-now-playing-total,
+.arcade-now-playing-caption {
+  margin-top: .4rem;
+}
+
+.arcade-now-playing-total {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.arcade-now-playing-caption {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .65;
+}
+
+.arcade-now-playing-empty {
+  margin: 0;
+  opacity: .7;
+}
+
+/* Overlap animated panels to maintain a consistent block height. */
+.arcade-now-playing-animated .arcade-now-playing-panels {
+  display: grid;
+  overflow: hidden;
+}
+
+.arcade-now-playing-animated [data-arcade-panel] {
+  grid-area: 1 / 1;
+}
+.arcade-now-playing-game { display:block; text-align:center; margin: .65rem 0; font-weight:600; overflow-wrap:anywhere; }
